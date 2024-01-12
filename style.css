@@ -1,0 +1,66 @@
+@import "/css/reset.css";
+@import "/css/header.css";
+
+main{
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.accueil-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    line-height: 40px;
+    letter-spacing: 1.04px;
+}
+h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+    line-height: 32px;
+    letter-spacing: 1.04px;
+}
+.accueil-reduction{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.accueil-reduction-single{
+    width: 100%;
+}
+.accueil-ventes{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.accueil-ventes-pokemon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.accueil-ventes-pokemon-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    background-color:white;
+}
+.accueil-ventes-pokemon-card-img{
+    width: 50%;
+}
+.accueil-ventes-pokemon-card-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    line-height: 32px;
+    letter-spacing: 1.04px;
+    text-transform: capitalize;
+}

@@ -9,16 +9,18 @@
 <body>
     <header>
         <nav>
-            <img src="" alt="">
+            <img src="img/pokemon-icon.png" alt="pokémerce icon">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="produit.html">Produits</a></li>
-                <li><a href="panier.html">Panier</a></li>
+                <div class="search-div">
+                    <input type="text" id="searchInput" placeholder="Nom du Pokémon" />
+                    <button id="searchButton">Rechercher</button>
+                </div>
+                <div class="li">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produit.html">Produits</a></li>
+                    <li><a href="panier.html">Panier</a></li>
+                </div>
             </ul>
-            <div class="search-div">
-                <input type="text" id="searchInput" placeholder="Nom du Pokémon" />
-                <button id="searchButton">Rechercher</button>
-            </div>
         </nav>
     </header>
     <main>
@@ -27,14 +29,14 @@
             <h2>Le site où vous pouvez achetez votre pokémon préféré à bas prix !</h2>
         </section>
         <section class="accueil-reduction">
-            <div class="accueil-reduction-first">
+            <div class="accueil-reduction-single magicarpe">
                 <h2>Offre spéciale !</h2>
                 <p>
                     Profitez d'une offre imbattable, un magicarpe à -50% 
                     <br>(Personne ne voulait de lui, le pauvre 😭)
                 </p>
             </div>
-            <div class="accueil-reduction-second">
+            <div class="accueil-reduction-single zoruark">
                 <h2>Offre unique !</h2>
                 <p>
                     Pokémon exceptionnel, un zoruark est disponible à la vente !
@@ -47,7 +49,6 @@
         </section>
         <section class="accueil-ventes">
             <h2>Retrouver ici l'intégralité des pokémon que nous possédons</h2>
-            <div class="accueil-ventes-pokemon"></div>
         </section>
     </main>
     <footer>
