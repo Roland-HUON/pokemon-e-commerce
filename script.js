@@ -11,7 +11,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/charizard")
         document.querySelector(".accueil-best-sellers-pokemon").appendChild(pokemonCard);
     });
 
-fetch("https://pokeapi.co/api/v2/pokemon/charizard")
+fetch("https://pokeapi.co/api/v2/pokemon/lucario")
     .then((response) => response.json())
     .then((data) => {
         const pokemonCard = document.createElement("div");
@@ -23,7 +23,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/charizard")
         document.querySelector(".accueil-best-sellers-pokemon").appendChild(pokemonCard);
     });
 
-fetch("https://pokeapi.co/api/v2/pokemon/charizard")
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
     .then((response) => response.json())
     .then((data) => {
         const pokemonCard = document.createElement("div");
@@ -35,7 +35,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/charizard")
         document.querySelector(".accueil-best-sellers-pokemon").appendChild(pokemonCard);
     });
 
-fetch("https://pokeapi.co/api/v2/pokemon/charizard")
+fetch("https://pokeapi.co/api/v2/pokemon/greninja")
     .then((response) => response.json())
     .then((data) => {
         const pokemonCard = document.createElement("div");
@@ -47,7 +47,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/charizard")
         document.querySelector(".accueil-best-sellers-pokemon").appendChild(pokemonCard);
     });
 
-fetch("https://pokeapi.co/api/v2/pokemon/charizard")
+fetch("https://pokeapi.co/api/v2/pokemon/magnezone")
     .then((response) => response.json())
     .then((data) => {
         const pokemonCard = document.createElement("div");
@@ -59,7 +59,7 @@ fetch("https://pokeapi.co/api/v2/pokemon/charizard")
         document.querySelector(".accueil-best-sellers-pokemon").appendChild(pokemonCard);
     });
 
-fetch("https://pokeapi.co/api/v2/pokemon/charizard")
+fetch("https://pokeapi.co/api/v2/pokemon/eevee")
     .then((response) => response.json())
     .then((data) => {
         const pokemonCard = document.createElement("div");
@@ -77,7 +77,6 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=30")
         const accueilVentesPokemon = document.createElement("div");
         accueilVentesPokemon.classList.add("accueil-ventes-pokemon");
         data.results.forEach((pokemon) => {
-            console.log(data);
             const pokemonCard = document.createElement("div");
             pokemonCard.classList.add("accueil-ventes-pokemon-card");
             pokemonCard.innerHTML = `
