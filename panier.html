@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokémerce - Panier</title>
     <link rel="stylesheet" href="panier.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <img src="" alt="">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produit.html">Produits</a></li>
+                <li><a href="panier.html">Panier</a></li>
+            </ul>
+            <div class="search-div">
+                <input type="text" id="searchInput" placeholder="Nom du Pokémon" />
+                <button id="searchButton">Rechercher</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="panier-grid-main">
+            <div class="panier-main">
+                <section class="panier-title">
+                    <h1>Votre panier</h1>
+                </section>
+                <section class="panier-panier"></section>
+            </div>
+            <section class="recommandation">
+                <h2>Nos recommandations</h2>
+                <div class="recommandation-pokemon"></div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Pokémerce - All right reserved - Pokémerce, 48 avenue ligue Crystal, 89556 Volucité</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
