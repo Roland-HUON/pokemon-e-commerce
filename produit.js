@@ -1,6 +1,8 @@
+//A votre attention, il semblerait que le changement des trentes pokémons ne marche pas en ligne !!!
+
 //afficher les 30 premiers pokémon dans la page produit (partie produit-ventes)
-// let palettePokemon = Number(localStorage.getItem("palettePokemon")) || 0;
-let palettePokemon = 0;
+let palettePokemon = Number(localStorage.getItem("palettePokemon")) || 0;
+// let palettePokemon = 0;
 localStorage.setItem("palettePokemon", palettePokemon);
 if(localStorage.getItem("palettePokemon") == 0){
 fetch(`https://pokeapi.co/api/v2/pokemon?limit=30`)
@@ -41,18 +43,18 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=30`)
                     //afficher les infos général du pokémon choisit
                     document.querySelector(".produit-ventes-single").innerHTML = `
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png" alt="image pokemon" class="pokemon-card-img">
-                    <div class="pokemon-card-infos">
-                        <h2>${data.name}</h2>
+                    <div class="pokemon-card-infos after">
+                        <h2 class="after-h2">${data.name}</h2>
                         <div class="pokemon-card-infos-type">
-                            <p>Types : ${data.types.map((type) => type.type.name).join(", ")}</p>
+                            <p class="after-p">Types : ${data.types.map((type) => type.type.name).join(", ")}</p>
                         </div>
                         <div class="pokemon-card-infos-abilities">
-                            <p>Abilities : ${data.abilities.map((ability) => ability.ability.name).join(", ")}</p>
+                            <p class="after-p">Abilities : ${data.abilities.map((ability) => ability.ability.name).join(", ")}</p>
                         </div>
                         <div class="pokemon-card-infos-stats">
-                            <p id="stats">Stats : </p>
+                            <p class="after-p" id="stats">Stats : </p>
                         </div>
-                        <button class="add-panier">Ajouter au panier</button>
+                        <button class="add-panier after-button">Ajouter au panier</button>
                     </div>
                     `;
                     //afficher les stats du pokémon
@@ -100,6 +102,7 @@ palettePokemonSwitch.appendChild(palettePokemonButtonPast);
 palettePokemonSwitch.appendChild(palettePokemonText);
 palettePokemonSwitch.appendChild(palettePokemonButtonNext);
 palettePokemonButtonPast.addEventListener("click", () => {
+    palettePokemon = Number(localStorage.getItem("palettePokemon")) || 0;
     palettePokemon--;
     localStorage.setItem("palettePokemon", palettePokemon);
     location.reload();
@@ -107,6 +110,7 @@ palettePokemonButtonPast.addEventListener("click", () => {
     palettePokemonText.textContent = `${palettePokemon}`;
 })
 palettePokemonButtonNext.addEventListener("click", () => {
+    palettePokemon = Number(localStorage.getItem("palettePokemon")) || 0;
     palettePokemon++;
     localStorage.setItem("palettePokemon", palettePokemon);
     location.reload();

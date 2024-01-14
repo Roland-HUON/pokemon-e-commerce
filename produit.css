@@ -3,6 +3,7 @@
 @import "/css/footer.css";
 @import "css/type.css";
 @import "css/pokemon-card.css";
+@import "css/after-render.css";
 
 main{
     padding: 40px 60px;
@@ -43,6 +44,11 @@ input{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+.palette-pokemon-switch{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 @media screen and (max-width: 1000px) {
     main{

@@ -3,8 +3,22 @@ const updateList = () =>{
     const panierElement = document.querySelector(".panier-panier-ul");
     panierElement.innerHTML = "";
     pokemonPanier.forEach((pokemon, index) => {
-        panierElement.innerHTML += `<li><p>${pokemon}</p> <p>10,00€</p> <button onclick="removePokemon(${index})">Supprimer</button></li><hr>`;
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+            .then((response) => response.json())
+            .then((data) => {
+                const price = 7 * data.id + 5* data.types.length;
+                localStorage.setItem("price", JSON.stringify(price));
+                panierElement.innerHTML += `<li><p>${pokemon}</p> <p>${price}€</p> <button onclick="removePokemon(${index})">Supprimer</button></li><hr>`;
+                //stocker ce prix dans un tableau des prix en local storage et initialiser le tableau
+                const priceArray = JSON.parse(localStorage.getItem("priceArray")) || [];
+                priceArray.push(price);
+                localStorage.setItem("priceArray", JSON.stringify(priceArray));
+            });
     });
+    const priceArray = JSON.parse(localStorage.getItem("priceArray")) || [];
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const totalPrice = priceArray.reduce(reducer, 0);
+    document.querySelector(".total").innerHTML = totalPrice + "€";
 };
 const removePokemon = (index) => {
     const pokemonElement = JSON.parse(localStorage.getItem("panier")) || [];
