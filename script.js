@@ -108,3 +108,11 @@ fetch("https://pokeapi.co/api/v2/pokemon/eevee")
         });
     });
 });
+const zorua = document.querySelector(".zorua");
+zorua.addEventListener("click", () => {
+    window.location.href = `produit.html?name=zorua`;
+});
+const magicarpe = document.querySelector(".magicarpe");
+magicarpe.addEventListener("click", () => {
+    window.location.href = `produit.html?name=magikarp`;
+});
