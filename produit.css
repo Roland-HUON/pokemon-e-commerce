@@ -1,34 +1,62 @@
 @import "/css/reset.css";
 @import "/css/header.css";
 @import "/css/footer.css";
+@import "css/type.css";
+@import "css/pokemon-card.css";
 
 main{
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
+}
+.produit-ventes-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.search-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+input{
+    width: 60%;
+    height: 30px;
+}
+#searchButton{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+}
+#searchButton:hover{
+    background-color: white;
+    color: red;
 }
 .ventes-pokemon{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-.pokemon-card{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid black;
-    background-color:white;
-    cursor: pointer;
+@media screen and (max-width: 1000px) {
+    main{
+        padding: 20px 30px;
+    }
 }
-.pokemon-card-img{
-    width: 50%;
+@media screen and (max-width: 800px) {
+    .ventes-pokemon{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-.pokemon-card-title{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    line-height: 32px;
-    letter-spacing: 1.04px;
-    text-transform: capitalize;
+@media screen and (max-width: 500px) {
+    .ventes-pokemon{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
 }

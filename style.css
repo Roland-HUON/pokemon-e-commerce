@@ -1,12 +1,15 @@
 @import "/css/reset.css";
 @import "/css/header.css";
 @import "/css/footer.css";
+@import "css/type.css";
+@import "css/pokemon-card.css";
 
 main{
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
     gap: 60px;
+    overflow-x: hidden;
 }
 .accueil-title{
     display: flex;
@@ -23,6 +26,7 @@ h1{
     letter-spacing: 1.04px;
 }
 h2{
+    text-align: center;
     font-size: 32px;
     font-weight: 600;
     color: black;
@@ -30,12 +34,62 @@ h2{
     letter-spacing: 1.04px;
 }
 .accueil-reduction{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    display: flex;
     gap: 20px;
+    height: 400px;
 }
 .accueil-reduction-single{
-    width: 100%;
+    border: 3px solid black;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.accueil-reduction-single h2{
+    overflow: hidden;
+    transform: rotate(-35deg);
+    background-color: red;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    line-height: 32px;
+    letter-spacing: 1.04px;
+}
+.accueil-reduction-single p{
+    padding-inline-start: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    line-height: 32px;
+    letter-spacing: 1.04px;
+}
+.magicarpe{
+    background-image: url("/img/magicarape.webp");
+    background-size: cover;
+}
+.zorua{
+    background-image: url("/img/zorua.jpg");
+    background-size: cover;
+}
+
+.accueil-best-sellers{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.accueil-best-sellers-pokemon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 .accueil-ventes{
     display: flex;
@@ -47,22 +101,25 @@ h2{
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-.pokemon-card{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid black;
-    background-color:white;
-    cursor: pointer;
+
+@media screen and (max-width: 1200px) {
+    .accueil-reduction-single{
+        width: 100%;
+    }
+    .zorua{
+        display: none;
+    }
 }
-.pokemon-card-img{
-    width: 50%;
+@media screen and (max-width: 800px) {
+    .accueil-best-sellers-pokemon{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main{
+        padding: 20px 30px;
+    }
 }
-.pokemon-card-title{
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    line-height: 32px;
-    letter-spacing: 1.04px;
-    text-transform: capitalize;
+@media screen and (max-width: 500px) {
+    .accueil-best-sellers-pokemon{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

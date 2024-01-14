@@ -1,0 +1,36 @@
+.after{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.after-h2{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 1.04px;
+    font-weight: 600;
+}
+.after-p{
+    text-align: center;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1.04px;
+    font-weight: 400;
+}
+.pokemon-card-infos-stats p{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.after-button{
+    align-self: center;
+    width: 50%;
+}

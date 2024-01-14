@@ -1,3 +1,11 @@
 @import "/css/reset.css";
 @import "/css/header.css";
 @import "/css/footer.css";
+@import "css/pokemon-card.css";
+@import "css/type.css";
+.panier-grid-main{
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
